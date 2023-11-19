@@ -1,12 +1,10 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 'use client'
 
 import Cart from '@/components/Cart'
-import React,{useEffect} from 'react'
+import React from 'react'
 import product1 from '@/assets/product1.png';
 import product2 from '@/assets/product2.png';
 import Product from '@/components/Product';
-import useStore from '@/store/cartStore';
 
 export default function Shopping() {
   const productData1 = {
@@ -22,13 +20,9 @@ export default function Shopping() {
     id:2
   };
 
-  useEffect(() => {
-    useStore.setState({ products: [productData1, productData2] });
-  }, []);
-
   return (
     <div className='flex sm:flex-row flex-col h-full'>
-       <div className='flex-1 flex flex-col md:flex-row gap-4'>
+       <div className='flex-1 flex gap-4 flex-wrap'>
         <Product {...productData1} />
         <Product {...productData2} />
        </div>

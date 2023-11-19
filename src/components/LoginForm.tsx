@@ -33,7 +33,8 @@ export default function LoginForm() {
         const authInfo = loginData.data;
         toast.success('Logged in successfully !');
         login(authInfo);
-        localStorage.setItem('stripe-user', JSON.stringify(authInfo));
+        const isBrowser = typeof window !== "undefined"; 
+        isBrowser && localStorage.setItem('stripe-user', JSON.stringify(authInfo));
         setNotification({
           message: 'Loggedin successfully!',
           type: 'success',

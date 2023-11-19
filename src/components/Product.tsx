@@ -15,8 +15,8 @@ const Product: React.FC<ProductProps> = ({ id, image, name, price }) => {
   const isInCart = cart.find((item) => item.id === id);
 
   return (
-    <div className="text-center w-[220px] shadow-md h-[300px]">
-      <Image src={image} alt={name} className="mb-2 w-[220px] h-[180px]" />
+    <div className="text-center w-full sm:w-[220px] shadow-md h-[300px]">
+      <Image src={image} alt={name} className="mb-2 w-full sm:w-[220px] h-[180px]" />
       <h2 className="text-lg font-bold">{name}</h2>
       <p className="text-gray-600">${price.toFixed(2)}</p>
       {isInCart ? (
@@ -29,7 +29,7 @@ const Product: React.FC<ProductProps> = ({ id, image, name, price }) => {
       ) : (
         <button
           onClick={() => addToCart(id, { id, image, name, price })}
-          className="bg-blue-500 text-white px-4 py-2 rounded-md mt-2 hover:bg-blue-700 transition duration-300"
+          className="bg-primary text-white px-4 py-2 rounded-md mt-2 hover:bg-blue-700 transition duration-300"
         >
           Add to Cart
         </button>

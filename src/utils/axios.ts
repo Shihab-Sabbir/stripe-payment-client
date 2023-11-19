@@ -9,7 +9,7 @@ import {
 import axios, { AxiosInstance } from "axios";
 
 const authAxios: AxiosInstance = axios.create({
-  baseURL: "http://localhost:8000/api/v1",
+  baseURL: `${process.env.NEXT_PUBLIC_BASE_URL}`,
 });
 
 const useAPI = () => {

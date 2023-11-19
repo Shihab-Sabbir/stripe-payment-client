@@ -10,7 +10,7 @@ export default function Navbar() {
   const {user} = useAuthStore();
   return (
     <div className='w-full  h-[50px] bg-primary/70 flex items-center justify-between px-3'>
-      <button onClick={()=>logout()} className='px-3 py-1 bg-white rounded-lg text-xs uppercase font-semibold'>
+      <button onClick={()=>logout()} className='px-3 py-1 bg-white hover:bg-primary hover:text-white rounded-lg text-xs uppercase font-semibold'>
         Logout
       </button>
       <div className='flex items-center gap-4'>

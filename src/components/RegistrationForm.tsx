@@ -5,6 +5,7 @@ import Notification from './Notification';
 import useAPI from '@/utils/axios';
 import { useRouter } from 'next/navigation';
 import CustomForm from './CustomForm';
+import { setTimeout } from 'timers';
 
 export default function RegistrationForm() {
   const { registerUser } = useAPI();
@@ -26,7 +27,10 @@ export default function RegistrationForm() {
           message: 'Registration successful !',
           type: 'success',
         });
-        router.push('/login')
+        setTimeout(() => {
+          router.push('/login')
+        }, 1000);
+        
       } else {
         setNotification({
           message: user || 'Something went wrong, please try again!',

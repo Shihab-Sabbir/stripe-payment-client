@@ -5,8 +5,7 @@ import { Elements } from "@stripe/react-stripe-js";
 import { useSearchParams } from "next/navigation";
 import { CheckoutForm } from "./CheckoutForm";
 
-const stripePromise = loadStripe("pk_test_51M6ASuFYDMLeNVaQCwHq9jco0SCMUiANa4YcODdYzhmHIk40aV4sBkcGCwdsfHbeXza2Nk1CF0e7wrb8osPkV8xy00fXPfdPhn");
-
+const stripePromise = loadStripe(`${process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}` )
 
 const Checkout = () => {
   const searchParams = useSearchParams()

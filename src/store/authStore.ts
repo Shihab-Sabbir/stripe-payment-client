@@ -1,3 +1,5 @@
+"use client";
+
 import { IUser } from "@/types/interface";
 import create from "zustand";
 
@@ -23,7 +25,8 @@ const useAuthStore = create<AuthState>((set) => ({
     set({
       user: null,
     });
-    localStorage.removeItem("stripe-user");
+    const isBrowser = typeof window !== "undefined";
+    isBrowser && localStorage.removeItem("stripe-user");
   },
 }));
 

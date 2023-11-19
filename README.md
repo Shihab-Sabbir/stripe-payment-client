@@ -1,38 +1,138 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Stripe Payment App Documentation
 
-## Getting Started
+## Live Link
 
-First, run the development server:
+[Live Here](https://stripe-client.vercel.app/)
+
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Technologies Used](#technologies-used)
+3. [Features](#features)
+4. [Project Structure](#project-structure)
+5. [Setup and Installation](#setup-and-installation)
+6. [Development](#development)
+8. [Linting and Code Quality](#linting-and-code-quality)
+9. [Deployment](#deployment)
+
+
+## Introduction
+
+The Business Health Indicator App is a web application designed to assess and display the financial condition of a business. It provides users with a comprehensive view of their business's financial health based on various key indicators and metrics. The app aims to help business owners and stakeholders make informed decisions by visualizing critical financial data.
+
+## Technologies Used
+
+The Business Health Indicator App is built using the following technologies:
+
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: A superset of JavaScript that adds static typing to the language.
+- **Ant Design (AntD)**: A React UI library with a set of high-quality components.
+- **Tailwind CSS**: A utility-first CSS framework for rapidly building custom designs.
+- **Zustand**: A library for state management in React applications, built on top of Zustand.
+- **Linting**: ESLint for linting TypeScript code.
+- **Husky and lint-staged**: Pre-commit hooks for running linting and formatting.
+
+## Features
+
+- **User Authentication**: Secure user authentication using industry-standard practices.
+- **Stripe Payment**: Payment by stripe payment gateway.
+- **Business Reports**: Detailed reports on various aspects of the business's financial health.
+- **User-Friendly Interface**: Intuitive and user-friendly design for easy navigation.
+
+## Project Structure
+
+The project follows a modular and organized structure to enhance maintainability. Here's a brief overview:
+
+- **`src/`**: The main source code directory.
+  - **`components/`**: Reusable React components.
+  - **`pages/`**: Top-level pages or views.
+  - **`redux/`**: Redux-related files, including actions, reducers, and the store setup.
+  - **`services/`**: External services, API integrations, etc.
+  - **`styles/`**: Global styles, theming, and CSS utilities.
+  - **`utils/`**: Utility functions and helper modules.
+  - **`App.tsx`**: The root component of the application.
+
+## Setup and Installation
+
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/Shihab-Sabbir/stripe-payment-client
+    ```
+
+2. **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+### Configure Environment Variables
+
+Create a `.env` file in the root of the project and add the necessary environment variables. Refer to the provided `.env.example` for a list of required variables.
+
+## Development
+
+Follow best practices and conventions for development. Adhere to coding standards defined in the ESLint configuration.
+
+### Running the Development Server
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Business Health Indicator App
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Building the Application
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm run build
+```
+## Testing
 
-## Learn More
+The application is equipped with a comprehensive test suite using Jest. Run the tests with the following command:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm test
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Linting and Code Quality
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Ensure your code meets the defined coding standards by running:
 
-## Deploy on Vercel
+```bash
+npm run lint
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To automatically fix linting issues, use:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# stripe-payment-client
-# stripe-payment-client
+```bash
+npm run lint:fix
+```
+
+## Deployment
+
+Follow these steps to deploy the Business Health Indicator App:
+
+1. **Build the application:**
+
+   ```bash
+   npm run build
+   ```
+
+ Deploy the build artifacts to your hosting provider of choice. 
+
+
+## Configuration for Production Deployment
+
+Make sure to configure any environment variables required for the production environment on your hosting provider.
+
+## Access the Deployed Application
+
+Once the deployment is successful, you can access the live application at the provided URL.
+
+
+## Conclusion
+
+The Business Health Indicator App is now set up, and you're ready to start development, testing, and eventually deploying it. Feel free to explore and customize the app to suit your specific business needs.
+
+
+
+# Trade-Analysis-Frontend

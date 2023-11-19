@@ -44,7 +44,7 @@ const Cart = () => {
   };
 
   return (
-    <div className="w-full sm:w-[280px] shadow-lg p-4 h-full bg-white sm:mt-0 mt-8 flex flex-col justify-between">
+    <div className="max-w-screen sm:w-[280px] shadow-lg p-4 sm:h-[calc(100vh_-_137px)] bg-white sm:mt-0 mt-8 flex flex-col justify-between">
       <div>
         <h2 className="text-lg font-semibold mb-4">Shopping Cart</h2>
         {cart?.length === 0 && <p>Cart is empty !</p>}
@@ -57,7 +57,7 @@ const Cart = () => {
               <div className="flex flex-col items-center">
                 <button
                   onClick={() => incrementQuantity(product.id)}
-                  className="bg-blue-500 text-white  grid place-content-center p-1 h-[25px] w-[25px] rounded-full"
+                  className="bg-primary text-white  grid place-content-center p-1 h-[25px] w-[25px] rounded-full"
                 >
                   +
                 </button>

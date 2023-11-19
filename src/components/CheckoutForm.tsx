@@ -7,6 +7,7 @@ import { FaCreditCard } from "react-icons/fa";
 import { FcExpired } from "react-icons/fc";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { useRouter } from 'next/navigation';
+import Notification from './Notification';
 
 export const CheckoutForm = ({clientSecret}:{clientSecret:string}) => {
   const stripe = useStripe();
@@ -77,7 +78,7 @@ export const CheckoutForm = ({clientSecret}:{clientSecret:string}) => {
         },
     },
 };
-console.log({processing,errorMessage})
+
   return (
     <form onSubmit={handleSubmit} className='payment-form border p-3 max-w-[320px] sm:max-w-[400px] shadow-lg bg-transparent' >
         <p className='pb-5'>Stripe Payment Gateway</p>
@@ -125,6 +126,7 @@ console.log({processing,errorMessage})
     className='text-xs uppercase px-3 py-2 rounded-md font-semibold text-white bg-primary dark:border border-0'>
         {processing ? "Processing...": "Pay Now"}
     </button>
+    {errorMessage && <Notification message={errorMessage} setMessage={setErrorMessage} type={'error'} />}
 </form>
   );
 };
