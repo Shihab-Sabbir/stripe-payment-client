@@ -18,15 +18,14 @@
 
 ## Introduction
 
-The Business Health Indicator App is a web application designed to assess and display the financial condition of a business. It provides users with a comprehensive view of their business's financial health based on various key indicators and metrics. The app aims to help business owners and stakeholders make informed decisions by visualizing critical financial data.
+Stripe elevates financial systems with a global, user-friendly interface. Security, customization, subscription management, developer tools, real-time reporting, quick payouts, mobile optimization, and fraud prevention enhance efficiency, benefiting business performance.
 
 ## Technologies Used
 
-The Business Health Indicator App is built using the following technologies:
+Stripe Payment App is built using the following technologies:
 
 - **React**: A JavaScript library for building user interfaces.
 - **TypeScript**: A superset of JavaScript that adds static typing to the language.
-- **Ant Design (AntD)**: A React UI library with a set of high-quality components.
 - **Tailwind CSS**: A utility-first CSS framework for rapidly building custom designs.
 - **Zustand**: A library for state management in React applications, built on top of Zustand.
 - **Linting**: ESLint for linting TypeScript code.
